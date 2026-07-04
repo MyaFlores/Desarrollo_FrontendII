@@ -1,0 +1,396 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(135deg, #021aa4 0%, rgb(12, 62, 200) 100%);
+  color: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+    background: linear-gradient(135deg, #00116f 0%, #0030b4 100%);
+
+
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #091fa0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffe100
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Galería horizontal */
+.gallery-container {
+  padding: 50px 10px;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffe100;
+}
+
+.gallery-horizontal {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #ffe100 #333;
+}
+
+.gallery-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-horizontal::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 10px;
+}
+
+.gallery-horizontal::-webkit-scrollbar-thumb {
+  background: #ffe100;
+  border-radius: 10px;
+}
+
+/* Movie Card */
+.movie-card {
+  flex: 0 0 280px;
+  height: 400px;
+  background: #2d2d44;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.movie-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px;
+}
+
+.movie-overlay h3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Información al hacer hover */
+.movie-info-hover {
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+}
+
+.movie-info-hover h3 {
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.movie-info-hover p {
+  font-size: 0.8rem;
+  margin: 8px 0;
+  color: #ddd;
+}
+
+.movie-info-hover .sinopsis {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #bbb;
+}
+
+.select-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 8px;
+  background: #243ab4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.select-btn:hover {
+  background: #3c56e5;
+}
+
+/* Formulario */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #000f64;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffd700;;
+}
+
+.pelicula-seleccionada {
+  background: #1a1a2e;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.clear-selection-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.form-group input,
+.form-group select {
+  width: 99%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a2e;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.pago-opciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 11px;
+}
+
+.pago-label {
+  display:block;
+  align-items: left;
+  gap: 20px;
+  padding: 10px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  cursor: pointer;
+  }
+
+.pago-label input {
+  width: auto;
+  margin: 3px;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #273fc2;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Ticket de compra */
+.ticket-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ticket {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ticket-header {
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.ticket-body {
+  padding: 20px;
+  color: #000000;
+}
+
+.ticket-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #000000;
+}
+
+.ticket-section h3 {
+  color: #2f386a;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.movie-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.ticket-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #000000;
+}
+
+.payment-details p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.ticket-footer {
+  background: #465cd7;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.close-ticket {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #091fa0;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a2e;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-horizontal {
+    gap: 15px;
+  }
+  
+  .movie-card {
+    flex: 0 0 240px;
+    height: 360px;
+  }
+  
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .ticket {
+    width: 90%;
+    margin: 20px;
+  }
+  
+  .pago-opciones {
+    grid-template-columns: 1fr;
+  }
+}
