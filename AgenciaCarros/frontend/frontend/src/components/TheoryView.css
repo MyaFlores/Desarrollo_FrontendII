@@ -1,0 +1,137 @@
+.theory-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.theory-title {
+  text-align: center;
+  color: #1a365d;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.theory-subtitle {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.theory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 25px;
+}
+
+.theory-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 5px solid #4299e1;
+}
+
+.theory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.theory-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.theory-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 35px;
+  height: 35px;
+  background: #4299e1;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.theory-question {
+  color: #2d3748;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.theory-card-body {
+  padding-left: 50px;
+}
+
+.theory-answer {
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.theory-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.theory-details li {
+  color: #4a5568;
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.theory-details li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #4299e1;
+  font-weight: bold;
+}
+
+.theory-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  color: #4a5568;
+}
+
+.theory-footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .theory-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .theory-card-body {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  .theory-number {
+    min-width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .theory-question {
+    font-size: 1rem;
+  }
+}
