@@ -96,6 +96,13 @@ Para explicar a detalle como esta conformada la estructura del proyecto se va a 
 ##
 
 ### 5. Instalacion y configuracion del proyecto
+**Requisitos previos**
+- Python 3.8 o superior
+- Node.js 18 o superior
+- npm o yarn
+- Git
+
+  **Clonar el repositorio**
   ```powershell
   uv --version
   ```
