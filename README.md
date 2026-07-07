@@ -54,11 +54,51 @@ Este proyecto demuestra la integracion entre frontend moderno y backend robusto,
 ##
 
 ### 4. Estructura del proyecto
+Para explicar a detalle como esta conformada la estructura del proyecto se va a dividir en **Backend** y **Frontend**
+
+### Frontend
+| Tecnología | Descripción |
+| :--- | :---: | 
+| frontend/ | Carpeta donde se almacena el proyecto de Frontend |
+| src/ | Carpeta principal donde se almacena todo el diseño de React |
+| components/ | Carpeta que almacena cada parte del proyecto | 
+| PlatilloCard.jsx | Tarjeta de informacion de un platillo | 
+| PlatilloList.jsx | Lista de platillos registrados |
+| PlatilloForm.jsx | Formulario para agregar platillos nuevos | 
+| SearchBar.jsx | Barra de busqueda |
+| FilterButtons.jsx | Botones para filtrar busquedas | 
+| StatsCard.jsx | Estadisticas del restaurante |
+| Aps.jsx | Componente principal que ejecuta el programa | 
+| App.css | Estilos globales |
+| main.jsx | | 
+| package.json |  |
+| vite.config.js | | 
+
+
+### Backend
+| Tecnología | Descripción |
+| :--- | :---: | 
+| backend/ | Carpeta donde se almacena el pro |
+| restaurante/ | |
+| settings.py | |
+| urls. py | |
+| menu/ | App principal del proyecto |
+| migrations/ | Migraciones de la base de datos |
+| admin.py | |
+| models.py | Modelos |
+| serializers.py | Serializador para la API|
+| views.py | Vistas y ViewSets|
+| urls.py | Rutas de la aplicación |
+| manage.py| |
+| requirements.txt | |
 
 
 ##
 
 ### 5. Instalacion y configuracion del proyecto
+  ```powershell
+  uv --version
+  ```
 
 ##
 
